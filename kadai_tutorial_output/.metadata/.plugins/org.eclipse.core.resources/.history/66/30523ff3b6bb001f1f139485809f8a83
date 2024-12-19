@@ -1,0 +1,8 @@
+const stripe = Stripe("pk_test_51QWIaALAcVrrvmoLvJ5yEwMj3QFn8TbD0xwfHy1zEJCPZsa3pJ8VK8Kac5iUHzdEcoG4pcCnZTiV7dVppWEIvFOs00INu71ECU");
+ const paymentButton = document.querySelector('#paymentButton');
+ 
+ paymentButton.addEventListener('click', () => {
+   stripe.redirectToCheckout({
+     sessionId: sessionId
+   })
+ });
